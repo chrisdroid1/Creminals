@@ -10,9 +10,9 @@
     "productivity"
   ],
   "repository": "https://github.com/Youngchris150/Noo/",
-  "website": #TODO
-  "success_url": #TODO
-  "env": {
+  "website": "https://github.com/Youngchris150/Noo/",
+  "success_url": "https://github.com/Youngchris150/Noo/",
+
     "ENV": {
       "description": "Set this to ANYTHING will enable heroku.",
       "value": "ANYTHING"
