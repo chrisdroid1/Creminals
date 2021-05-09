@@ -4,22 +4,22 @@
 _get_repolink () {
     local regex
     regex='(https?)://github.com/.+/.+'
-    if [[ $NO_REPO == "mafiabot" ]]
+    if [[ $NO_REPO == "Creminals" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL1lvdW5nY2hyaXMxNTAvTm8=" | base64 -d
-    elif [[ $NO_REPO == "No" ]]
+        echo "aHR0cHM6Ly9naXRodWIuY29tL1lvdW5nY2hyaXMxNTAvTm9v=" | base64 -d
+    elif [[ $NOO_REPO == "Noo" ]]
     then
-        echo "aHR0cHM6Ly9naXRodWIuY29tL1lvdW5nY2hyaXMxNTAvTm8=" | base64 -d
-    elif [[ $NO_REPO =~ $regex ]]
+        echo "aHR0cHM6Ly9naXRodWIuY29tL1lvdW5nY2hyaXMxNTAvTm9v=" | base64 -d
+    elif [[ $NOO_REPO =~ $regex ]]
     then
-        if [[ $NO_REPO_BRANCH ]]
+        if [[ $NOO_REPO_BRANCH ]]
         then
-            echo "${NO_REPO}/archive/${NO_REPO_BRANCH}.zip"
+            echo "${NOO_REPO}/archive/${NOO_REPO_BRANCH}.zip"
         else
-            echo "${NO_REPO}/archive/master.zip"
+            echo "${NOO_REPO}/archive/master.zip"
         fi
     else
-        echo "aHR0cHM6Ly9naXRodWIuY29tL1lvdW5nY2hyaXMxNTAvTm8=" | base64 -d
+        echo "aHR0cHM6Ly9naXRodWIuY29tL1lvdW5nY2hyaXMxNTAvTm9v=" | base64 -d
     fi
 }
 
@@ -30,13 +30,13 @@ _set_bot () {
     echo "  Downloading source code ..."
     wget -q $(_get_repolink) -O "$zippath"
     echo "  Unpacking Data ..."
-    NoPATH=$(zipinfo -1 "$zippath" | grep -v "/.");
+    NooPATH=$(zipinfo -1 "$zippath" | grep -v "/.");
     unzip -qq "$zippath"
     echo "Done"
     echo "  Cleaning ..."
     rm -rf "$zippath"
     sleep 5
-    cd $NOPATH
+    cd $NooPATH
     echo "    Starting Creminal    "
     echo "
                           ─────────────╔╗───────────╔═╗     ╔╗────╔╗─
