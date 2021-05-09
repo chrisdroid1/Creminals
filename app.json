@@ -11,8 +11,8 @@
   ],
   "repository": "https://github.com/Youngchris150/Noo/",
   "website": "https://github.com/Youngchris150/Noo/",
-  "success_url": "https://github.com/Youngchris150/Noo/",
-
+  "success_url": "https://github.com/Youngchris150/Noo",
+  "env": {
     "ENV": {
       "description": "Set this to ANYTHING will enable heroku.",
       "value": "ANYTHING"
